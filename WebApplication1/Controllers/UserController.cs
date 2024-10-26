@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             var user = users.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
-                return NotFound(); // Користувача не знайдено
+                return NotFound();
             }
 
             return View(user);
@@ -42,7 +42,7 @@ namespace WebApplication1.Controllers
                 users.Add(user);
                 return RedirectToAction("Index");
             }
-            return View(user); // Повертаємо назад форму, якщо дані не коректні
+            return View(user);
         }
 
         [HttpGet]
@@ -51,7 +51,7 @@ namespace WebApplication1.Controllers
             var user = users.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
-                return NotFound(); // Якщо користувача не знайдено
+                return NotFound();
             }
 
             return View(user);
@@ -65,8 +65,8 @@ namespace WebApplication1.Controllers
                 var existingUser = users.FirstOrDefault(u => u.Id == user.Id);
                 if (existingUser == null)
                 {
-                    return NotFound(); // Якщо користувача не знайдено
-                }
+                    return NotFound(); 
+
 
                 existingUser.FirstName = user.FirstName;
                 existingUser.LastName = user.LastName;
@@ -83,7 +83,7 @@ namespace WebApplication1.Controllers
             var user = users.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
-                return NotFound(); // Якщо користувача не знайдено
+                return NotFound();
             }
 
             return View(user);
@@ -95,7 +95,7 @@ namespace WebApplication1.Controllers
             var user = users.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
-                return NotFound(); // Якщо користувача не знайдено
+                return NotFound();
             }
 
             users.Remove(user);
