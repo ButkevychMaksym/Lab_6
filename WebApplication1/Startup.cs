@@ -9,7 +9,7 @@ namespace WebApplication1
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(); // Додаємо сервіси для контролерів та представлень
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
