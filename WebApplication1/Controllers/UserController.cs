@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            return View(users);
+            return View(users); 
         }
 
         public IActionResult Details(int id)
